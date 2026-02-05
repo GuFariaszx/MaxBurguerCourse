@@ -74,7 +74,49 @@ hmtl {
   font-family: "Outfit", sans-serif;
 }
 
-.burguer {
-    height: 400px;
-    background-color: #FFB100;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
+
+.burgers {
+  background-color: #FFB100; 
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+
+.burger-card {
+  width: 220px;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.burger-card img {
+  width: 100%;
+  display: block;
+}
+
+.burger-card h2 {
+  position: absolute;
+  font-family: "Ultra", serif;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.burger-card.destaque {
+  transform: scale(1.08);
+}
+
