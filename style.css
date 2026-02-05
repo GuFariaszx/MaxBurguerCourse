@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ultra&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hmtl {
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    box-shadow: 0px 1px 10px black;
+    background-color: #fef0ef;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.links {
+    display: flex;
+    gap: calc(50px);
+    align-items: center;
+    list-style-type: none;
+}
+
+.links li a {
+    font-size: 20px;
+    font-family: "Ultra", serif;
+    color: #ff0a03;
+    text-decoration: none;
+}
+
+.hamburguer-image {
+  position: relative; 
+}
+
+.back {
+  width: 100%;;
+}
+
+.front {
+  position: absolute;
+  opacity: 0.8;
+  top: 150px;
+  left: 0px;
+  width: 100%;
+}
+
+.sobre {
+  background-color: #FEF0EF;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.sobre h1 {
+  color: #ff0a03;
+  font-size: 60px;
+  font-family: "Ultra", serif;
+  margin-bottom: 30px;
+}
+
+.sobre p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 35px;
+  font-family: "Outfit", sans-serif;
+}
+
+.burguer {
+    height: 400px;
+    background-color: #FFB100;
+}
