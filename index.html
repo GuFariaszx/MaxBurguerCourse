@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaxBurguer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
     <header class="header">
         <img src="Assets/logo.png" alt="logomarca" class="logo">
+
         <ul class="links">
-            <li><a href="#">Início</a></li>
-            <li><a href="sobre">Sobre</a></li>
-            <li><a href="localizacao">Localização</a></li>
-            <li><a href="contato">Contato</a></li>
+            <li><a href="#">INÍCIO</a></li>
+            <li><a href="#burguers">SOBRE</a></li>
+            <li><a href="#check-menu">MENU</a></li>
+            <li><a href="#footer">CONTATO</a></li>
         </ul>
+
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <section class="hamburguer-image">
@@ -23,9 +33,10 @@
     </section>
 
     <section class="sobre">
-        <h1>Bem Vindo ao MaxBurguer</h1>
+        <h1>BEM VINDO AO MAXBURGER</h1>
         <p>
-            Aqui comida boa é coisa séria e você é nossa principal prioridade. Sinta-se em casa e experimente o melhor que temos a oferecer.
+            Aqui comida boa é coisa séria e você é nossa principal prioridade. Sinta-se em casa e experimente o melhor
+            que temos a oferecer.
         </p>
     </section>
 
@@ -33,7 +44,7 @@
         <div class="burger-card">
             <h2>Max Bacon</h2>
             <img src="Assets/bacon.jpeg" alt="Max Bacon">
-         </div>
+        </div>
 
         <div class="burger-card destaque">
             <h2>Max Salad</h2>
@@ -45,8 +56,35 @@
             <img src="Assets/cheeseburguer.jpg" alt="Max X">
         </div>
     </section>
+    <section class="check-menu">
+        <h2>CONFIRA NOSSO CARDÁPIO</h2>
+        <div class="carousel">
+            <button class="back-csl-button">❮</button>
+            <div class="carousel-window">
+                <div class="carousel-track">
+                    <img src="Assets/combo 1.png" class="slide">
+                    <img src="Assets/milkshake 1.png" class="slide">
+                    <img src="Assets/refris.png" class="slide">
+                </div>
+            </div>
+            <button class="next-csl-button">❯</button>
+        </div>
+    </section>
 
-    
-
+    <footer class="footer">
+        <div class="content-grid">
+            <div class="empty"></div>
+            <div class="social-medias">
+                <p>Nos sigam nas redes sociais:</p>
+                <div class="icons">
+                    <a href="#"><img src="Assets/icons/youtubeIcon.png" alt=""></a>
+                    <a href="#"><img src="Assets/icons/twitterIcon.png" alt=""></a>
+                    <a href="#"><img src="Assets/icons/instagramIcon.png" alt=""></a>
+                </div>
+            </div>
+            <img src="Assets/logo.png" alt="" class="logo">
+        </div>
+    </footer>
 </body>
+
 </html>

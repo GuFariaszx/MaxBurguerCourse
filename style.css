@@ -2,48 +2,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ultra&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 hmtl {
-    background-color: white;
+  background-color: white;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 32px;
-    box-shadow: 0px 1px 10px black;
-    background-color: #fef0ef;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  box-shadow: 0px 1px 10px black;
+  background-color: #fef0efee;
+  height: 90px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
-    height: 100px;
-    width: 100px;
+  height: 80px;
+  width: 80px;
 }
 
 .links {
-    display: flex;
-    gap: calc(50px);
-    align-items: center;
-    list-style-type: none;
+  display: flex;
+  gap: calc(50px);
+  align-items: center;
+  list-style-type: none;
 }
 
 .links li a {
-    font-size: 20px;
-    font-family: "Ultra", serif;
-    color: #ff0a03;
-    text-decoration: none;
-}
-
-.hamburguer-image {
-  position: relative; 
+  font-size: 20px;
+  font-family: "Ultra", serif;
+  color: #ff0a03;
+  text-decoration: none;
 }
 
 .back {
-  width: 100%;;
+  width: 100%;
 }
 
 .front {
@@ -65,6 +66,7 @@ hmtl {
   font-size: 60px;
   font-family: "Ultra", serif;
   margin-bottom: 30px;
+  letter-spacing: 2px;
 }
 
 .sobre p {
@@ -80,11 +82,12 @@ body {
 }
 
 .burgers {
-  background-color: #FFB100; 
+  background-color: #FFB100;
   padding: 60px 40px;
   display: flex;
   justify-content: center;
   gap: 150px;
+  flex-wrap: wrap;
 }
 
 .burger-card {
@@ -93,9 +96,9 @@ body {
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  transition: transform 0.4s cubic-bezier(.25,.8,.25,1),
-              box-shadow 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s cubic-bezier(.25, .8, .25, 1),
+    box-shadow 0.4s ease;
 }
 
 .burger-card:hover {
@@ -119,13 +122,215 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
 }
 
 .burger-card.destaque {
-   transform: scale(1.08);
+  transform: scale(1.02);
 }
 
 .burger-card.destaque:hover {
   transform: scale(1.18);
+}
+
+.check-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  height: fit-content;
+  width: 100%;
+}
+
+.check-menu h2 {
+  color: #FEF0EF;
+  font-family: "Ultra", serif;
+  margin-top: 100px;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.carousel-window {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease;
+  padding: 0 5vw;
+}
+
+.slide {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto 0;
+
+  border-radius: 25px;
+  flex-shrink: 0;
+
+  opacity: 0.5;
+  transform: scale(0.85);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel button {
+  background: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer .content-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.social-medias {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-medias .icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-medias img {
+  display: flex;
+  width: 40px;
+}
+
+.social-medias p {
+  font-family: "Outfit", serif;
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .header .hamburger {
+    display: flex;
+  }
+
+  .links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #fef0ef;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0;
+
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
+  }
+
+  .links.active {
+    transform: translateY(0);
+  }
+
+  .links li a {
+    font-size: 24px;
+  }
+
+  .burgers {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .sobre h1 {
+    font-size: 40px;
+  }
+
+  .sobre p {
+    font-size: 22px;
+  }
+
+  .slide {
+    max-width: 90vw;
+    transform: scale(0.95);
+    margin-top: 20px;
+  }
+
+  .slide.active {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .front {
+    display: none;
+  }
+
+  .sobre h1 {
+    font-size: 30px;
+  }
+
+  .check-menu h2 {
+    font-size: 30px;
+  }
+
+  .burger-card {
+    width: 85%;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: #ff0a03;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 400px) {
+
+  .carousel button {
+    display: none;
+  }
+  
 }
